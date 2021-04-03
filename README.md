@@ -1,4 +1,4 @@
-# pizza-planet
+# octo-pizza-planet
 
 ## Project setup
 ```
