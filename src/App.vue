@@ -1,17 +1,17 @@
 <template>
   <div id="app">
-    <p>Octo Pizza Planet</p>
-  </div>
+      <app-header/>
+    </div>
 </template>
 
 <script>
-
+import Header from './components/Header'
 export default {
   name: 'App',
   components: {
-
+    appHeader: Header,
   }
-}
+};
 </script>
 
 <style>
