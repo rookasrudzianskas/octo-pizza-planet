@@ -24,7 +24,26 @@
         </tbody>
       </table>
     </div>
-    {{ basket }}
+
+<!--    shopping basket-->
+    <div class="basket">
+      <h3>~ Basket ~</h3>
+      <table>
+        <tbody>
+        <tr>
+          <td>
+            <button class="btn_green">&#8722;</button>
+            <span>2</span>
+            <button class="btn_green">&#43;</button>
+          </td>
+          <td>Pepperoni 9"</td>
+          <td>Price</td>
+        </tr>
+        </tbody>
+      </table>
+      <p>Order total:</p>
+      <button class="btn_green">Place Order</button>
+    </div>
   </div>
 </template>
 <script>
@@ -105,7 +124,7 @@ h3 {
 
 }
 
-.menu {
+.menu, .basket {
   background-color: #f1e6da;
   border-radius: 3px;
   height: 100vh;
@@ -121,5 +140,10 @@ h3 {
   .menu {
     width: 65vw;
   }
+  .basket{
+    width: 35vw;
+  }
 }
+
+
 </style>
