@@ -18,18 +18,20 @@
           <td>{{ option.size }}"</td>
           <td>$ {{ option.price }}</td>
           <td>
-            <button type="button" class="btn_green">+</button>
+            <button type="button" class="btn_green" @click="addToBasket(item, option)">+</button>
           </td>
         </tr>
         </tbody>
       </table>
     </div>
+    {{ basket }}
   </div>
 </template>
 <script>
 export default {
   data() {
     return {
+      basket: [],
       getMenuItems: {
         1: {
           'name': 'Margherita',
@@ -66,9 +68,28 @@ export default {
         }
 
       }
+    };
+  },
+  methods: {
+    async addToBasket(item, option) {
+      const pizzaExists = await this.basket.find(
+          pizza => pizza.name === item.name && pizza.size === option.size
+      )
+      if(pizzaExists) {
+        pizzaExists.quantity++
+        return
+
+      }
+      this.basket.push({
+        name: item.name,
+        price: item.price,
+        size: option.size,
+        quantity: 1
+
+      })
     }
   }
-}
+};
 </script>
 
 
