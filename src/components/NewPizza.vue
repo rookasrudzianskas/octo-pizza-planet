@@ -31,7 +31,8 @@
       <label for="price2">Price</label>
       <input type="text" id="price2" v-model="newPizza.options[1].price"/>
     </div>
-    <button type="button" class="btn_green">Add</button>
+    <button type="button" class="btn_green" @click="add">Add</button>
+    {{this.newPizza}}
   </form>
 </template>
 
@@ -49,11 +50,17 @@ export default {
         }, {
           'size': 12,
           'price': 10.95
-        }]
+        }
+        ]
       }
+    };
+  },
+  methods: {
+    add() {
+      alert('methord tigered');
     }
   }
-}
+};
 </script>
 
 <style>
