@@ -9,7 +9,7 @@
         <li>
 <!--          <a href="/">home</a>-->
           <router-link to="/">
-            <a>Home</a>
+            <a href="">Home</a>
           </router-link>
         </li>
         <span>~</span>
