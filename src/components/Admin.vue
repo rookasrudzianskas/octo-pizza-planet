@@ -68,6 +68,17 @@ export default {
     Login,
   },
 
+  data() {
+    return {
+      name: 'Rokas'
+      };
+    },
+  beforeRouteEnter(to, from, next) {
+    next(vm => {
+      alert(`Hi, ${vm.name}`);
+    });
+  },
+
   methods: {
     async signOut() {
       try {
