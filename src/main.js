@@ -16,14 +16,14 @@ Vue.use(VueRouter)
 
 
 const routes = [
-    {path: '/', component: Home },
-    {path: '/menu', component: Menu },
-    {path: 'contact', component: Contact},
-    {path: '/admin', component: Admin},
-    {path: '/about', component: About, children: [
-            {path: '/history', component: History},
-            {path: '/delivery', component: Delivery},
-            {path: '/ordering-guide', component: OrderingGuide},
+    {path: '/', name: 'homeLink', component: Home },
+    {path: '/menu', name: 'menuLink',component: Menu },
+    {path: 'contact', name: 'contactLink', component: Contact},
+    {path: '/admin', name: 'adminLink', component: Admin},
+    {path: '/about', name: 'aboutLink', component: About, children: [
+            {path: '/history', name: 'historyLink', component: History},
+            {path: '/delivery', name: 'deliveryLink', component: Delivery},
+            {path: '/ordering-guide', name: 'orderingGuideLink', component: OrderingGuide},
         ]},
     {path: '*', redirect: '/'}
 ]
