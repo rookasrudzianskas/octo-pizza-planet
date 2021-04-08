@@ -13,7 +13,12 @@ import History from './components/History'
 
 
 export const routes = [
-    {path: '/', name: 'homeLink', component: Home },
+    {path: '/', name: 'homeLink', components: {
+        default: Home,
+            'ordering-guide': OrderingGuide,
+            'delivery': Delivery,
+            'history': History,
+        } },
     {path: '/menu', name: 'menuLink',component: Menu },
     {path: 'contact', name: 'contactLink', component: Contact},
     {
