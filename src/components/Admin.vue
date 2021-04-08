@@ -14,9 +14,9 @@
             <th>Remove from menu</th>
           </tr>
           </thead>
-          <tbody>
+          <tbody v-for="item in getMenuItems" :key="item.id">
           <tr>
-            <td>Margherita</td>
+            <td>{{ item.name }}</td>
             <td>
               <button type="button" class="btn_red">&times;</button>
             </td>
@@ -25,7 +25,7 @@
         </table>
       </div>
       <div class="orders_wrapper">
-        <h3>Current Orders (5): </h3>
+        <h3>Current Orders ({{ numberOfOrders }}): </h3>
           <table>
             <thead>
             <tr>
@@ -66,6 +66,15 @@ export default {
   components: {
     NewPizza,
     Login,
+  },
+
+  computed: {
+    getMenuItems() {
+      return this.$store.getters.getMenuItems;
+    },
+    numberOfOrders() {
+      return this.$store.getters.numberOfOrders;
+    }
   },
 
 
