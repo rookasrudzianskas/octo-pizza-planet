@@ -26,7 +26,7 @@ export const routes = [
         name: 'adminLink',
         component: Admin,
         beforeEnter: (to, from, next) => {
-            alert('This area is for authorized users only, please login to continue');
+            // alert('This area is for authorized users only, please login to continue');
             next()
         }
     },
