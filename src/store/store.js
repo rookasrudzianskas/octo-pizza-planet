@@ -48,12 +48,13 @@ export const store = new Vuex.Store({
     getters:{
         getMenuItems: state => state.menuItems,
         numberOfOrders: state => state.orders.length,
+        currentUser: state => state.currentUser,
     },
     mutations: {
         addOrder: (state, orders) => state.orders.push(orders),
         userStatus: (state, user) => {
             if(user) {
-                state.currentUser = user
+                state.currentUser = user.email
             } else {
                 state.currentUser = null
             }
@@ -77,6 +78,14 @@ export const store = new Vuex.Store({
                     alert(errorMessage);
                 }
             }
+        },
+        signOut: async ({commit }) => {
+            try {
+                await firebaseAuth.signOut()
+            } catch (error) {
+                alert(`error signing out, ${error}`);
+            }
+            commit('userStatus', null)
         }
     }
 
