@@ -51,7 +51,7 @@ export const store = new Vuex.Store({
     },
     mutations: {
         addOrder: (state, orders) => state.orders.push(orders),
-        userState: (state, user) => {
+        userStatus: (state, user) => {
             if(user) {
                 state.currentUser = user
             } else {
