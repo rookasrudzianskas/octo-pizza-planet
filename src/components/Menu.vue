@@ -53,6 +53,7 @@
 </template>
 <script>
 import {mapGetters } from 'vuex'
+import {store} from "../store/store"
 export default {
   data() {
     return {
@@ -96,7 +97,13 @@ export default {
     },
 
     addNewOrder() {
-      this.$store.commit('addOrder', this.basket);
+      const order = {
+        pizzas: {...this.basket },
+        createdAt: new Date(),
+
+      };
+      store.dispatch('addNewOrder', order);
+      // this.$store.commit('addOrder', this.basket);
       this.basket = [];
       this.basketText = "Thank you, your order was placed";
     }
