@@ -1,5 +1,6 @@
 <template>
   <div class="admin_wrapper">
+    <section v-if="currentUser !== null">
       <div class="current_user_wrapper">
         <span>Logged in as:</span>
         {{ currentUser }}
@@ -52,7 +53,8 @@
             </tbody>
           </table>
       </div>
-    <Login />
+    </section>
+    <Login v-if="currentUser == null"/>
   </div>
 </template>
 
