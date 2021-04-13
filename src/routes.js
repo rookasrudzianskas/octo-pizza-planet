@@ -1,16 +1,15 @@
 import Home from './components/Home'
-import Menu from './components/Menu'
+// import Menu from './components/Menu'
+const Menu = () => import('./components/Menu')
+const About = () => import('./components/About')
+const Contact = () => import('./components/Contact')
 import Delivery from './components/Delivery'
 // import OrderingGuide from './components/OrderingGuide'
-import About from './components/About'
+// import About from './components/About'
 import Admin from './components/Admin'
-import Contact from './components/Contact'
+// import Contact from './components/Contact'
 import OrderingGuide from './components/OrderingGuide'
 import History from './components/History'
-
-
-
-
 
 export const routes = [
     {path: '/', name: 'homeLink', components: {
