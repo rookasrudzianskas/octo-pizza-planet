@@ -105,6 +105,25 @@ span {
     order: -1;
   }
 }
+input, textarea {
+  font-size: 1.1rem;
+
+}
+
+button {
+  border: none;
+  font-size: 1.1rem;
+
+}
+
+.btn_green {
+  background: rgb(101, 168, 101);
+
+}
+
+.btn_red {
+  background: rgb(241, 168, 70);
+}
 
 
 </style>
