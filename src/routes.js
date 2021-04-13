@@ -1,13 +1,13 @@
 import Home from './components/Home'
-// import Menu from './components/Menu'
-const Menu = () => import('./components/Menu')
-const About = () => import(/* webpackChunkName: "menuGroup" */'./components/About')
-const Contact = () => import(/* webpackChunkName: "menuGroup" */'./components/Contact')
+import Menu from './components/Menu'
+// const Menu = () => import('./components/Menu')
+// const About = () => import(/* webpackChunkName: "menuGroup" */'./components/About')
+// const Contact = () => import(/* webpackChunkName: "menuGroup" */'./components/Contact')
 import Delivery from './components/Delivery'
 // import OrderingGuide from './components/OrderingGuide'
-// import About from './components/About'
+import About from './components/About'
 import Admin from './components/Admin'
-// import Contact from './components/Contact'
+import Contact from './components/Contact'
 import OrderingGuide from './components/OrderingGuide'
 import History from './components/History'
 
